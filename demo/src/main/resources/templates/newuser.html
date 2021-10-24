@@ -13,6 +13,7 @@
         <td>
           <!-- userFromのnameフィールドとの紐付け -->
           <input type="text" th:field="*{name}">
+          <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span> 
         </td>
       </tr>
       <tr>
@@ -20,6 +21,7 @@
         <td>  
           <!-- userFromのemailフィールドとの紐付け -->
           <input type="text" th:field="*{email}">
+          <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
         </td>
       </tr>
     </table>
